@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemig Software</title>
+    <link rel="shortcut icon" href="/img/udemig.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header><!-- başlık alanını header alanı içine aldık -->
+        <div class="container" id="header-container">
+            <!-- ilk kapsayıcı div başlık ve navigasyon alanı eşit aralıklarda olacağı için bu kapsayıcı içine aldık. sonra açılacak  div ve navigasyon alanları da kendi içlerinde birer kutu mantığı ile açılacak. -->
+            <div>
+                <h1 id="branding"><span class="highligt">Udemig</span>Software</h1>
+            </div>
+            <nav>
+                <!-- ul>(li>a)*3 kısa yolu ile ul içinde li onun da içinde 3 tane a etiketi açmış oluruz -->
+                <ul>
+                    <li class="current"><a href="index.html">Anasayfa</a></li>
+                    <li><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="services.html">Hizmetler</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header alanı bitiş -->
+    <!-- section1 başlangıç -->
+    <section id="showcase">
+        <div class="container">
+            <h1>Profesyonel Web Sitesi Dizaynı</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laudantium sunt recusandae corporis
+                exercitationem ipsum? Consequatur tempora repudiandae nesciunt iusto maiores numquam odio assumenda
+                itaque dolor, expedita molestiae architecto recusandae!20
+
+            </p>
+        </div>
+    </section>
+    <!-- section1 bitiş -->
+
+    <!-- section2 başlangıç -->
+    <section id="newsletter">
+        <div class="container">
+            <h1>Abone Olarak İlk Fırsatlardan Siz Yararlanın</h1>
+            <form>
+                <input type="email" placeholder="Email adresinizi giriniz"
+                    required /><!-- required ile alanı zorunlu kılıyoruz -->
+                <button class="button_1"
+                    type="submit">Gönder</button><!-- sumbit default olarak tanımlı gelir ve göndermeyi sağlar -->
+            </form>
+        </div>
+    </section>
+    <!-- section2 bitiş -->
+    <!-- section3 başlangıç -->
+    <section id="boxes">
+        <div class="container">
+            <div class="box">
+                <img src="/img/html.png" alt="logo">
+                <h3>HTML5</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quia repellendus cupiditate perspiciatis
+                </p>
+            </div>
+            <div class="box">
+                <img src="/img/css.png" alt="logo">
+                <h3>CSS3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quia repellendus cupiditate perspiciatis
+                </p>
+            </div>
+            <div class="box">
+                <img src="/img/brush.png" alt="logo">
+                <h3>Zengin Grafik Dizaynı</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quia repellendus cupiditate perspiciatis
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- section3 başlangıç -->
+    <!-- footer başlangıç -->
+    <footer>
+        <p>UdemigSoftware | Copyright * 2025</p>
+    </footer>
+</body>
+
+</html>

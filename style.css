@@ -1,0 +1,240 @@
+/* genel css değişkenleri tanımlama,yani projenin tamamında kullanılacak ortak özellikler */
+
+:root {
+  --maincolor: #669CF4;
+  --backgronud: #35424a;
+  --white: #f4f4f4;
+
+}
+
+/* htmlve body etiketlerinin temel düzenlemleri sayfanın varsayılan olarak gelen özelliklerini düzenlemek için yapılır.(birden fazla etiketi , ile çağırabiliriz) */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+
+}
+
+/* body etiketine ortak stillendirme sayfanın genelinde kullanılacak bazı ortak özellikler tanımlanacak*/
+body {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: var(--white);
+  display: flex;
+  /* flex mntığı ile çalışan etiketleri esnetmeye yarıyor,buna bağlı diğer özellikleri kullanmaya yarar. */
+  flex-direction: column;
+}
+
+/* container genel kapsayıcı yani başlığın içindeki alanın düzenlemesi sağlanacak özellkiler verilecek*/
+.container{
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  /* taşacak bir alan varsa engellenmiş olur */
+  flex: 1;
+  /* flex düzeninin daha da esnemesini sağlıyoruz */
+
+  /* header alanı başlangıç */
+}
+#header-container{
+display: flex;
+align-items: center;
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+
+}
+
+header {
+  background-color: var(--backgronud);
+  color: #fff;
+  min-height: 70px;
+  padding-top: 30px;
+  border-bottom: var(--maincolor) 3px solid;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+
+
+
+}
+
+header ul {
+  list-style-type: none;
+}
+
+header li {
+  float: left;
+  /* sola doğru hizalamayı sağlar displayden daha kolay olduğu için tercih sebebi olabilir */
+  display: inline;
+  /* bir HTML elementinin blok özelliği olmadan, yan yana dizilmesini sağlar. */
+  padding: 0 20px;
+
+}
+
+header #branding h1 {
+  margin: 0;
+}
+
+header nav {
+  float: right;
+  
+}
+
+header .highligt,
+header .current a {
+  color: var(--maincolor);
+  font-weight: bold;
+}
+
+/* header alanı bitiş */
+/* section1 alanı başlangıç */
+#showcase {
+  background: url(img/showcase.jpg) no-repeat 0 -400px;
+  /* -400 vermemizin sebebi foroğrafı aşağıdan yukarıya çekmek istmemeiz. kolar okunurken yukarıdan aşağıya doğru okunur bu durum da - ile yaptığımızda tam tesi bir drum gerçekleştirmiş oluruz */
+  min-height: 400px;
+  text-align: center;
+  color: #fff;
+
+}
+
+#showcase h1 {
+  font-size: 55px;
+  margin-top: 100px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+/* section1 alanı bitiş */
+/* section2 alanı başlangıç */
+#newsletter {
+
+  background-color: var(--backgronud);
+  color: #fff;
+  padding: 15px;
+}
+
+#newsletter h1 {
+  float: left;
+
+}
+
+#newsletter form {
+  float: right;
+  margin-top: 15px;
+}
+
+#newsletter input {
+  height: 25px;
+  width: 250px;
+  padding: 4px;
+}
+
+.button_1 {
+  height: 38px;
+  background: var(--maincolor);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  padding: 0 20px;
+
+}
+
+/* section2 alanı bitiş */
+/* boxes başlangıç */
+#boxes {
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  text-align: center;
+
+}
+
+#boxes .box img {
+  width: 90px;
+
+}
+
+/* services alanı */
+ ul #services li {
+  background-color: #e6e6e6;
+  list-style: none;
+  padding: 20px;
+  border: #ccc solid 1 px;
+  margin-bottom: 10px;
+}
+.quote div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+
+}
+.quote div input{
+  padding: 5px;
+}
+
+footer {
+  background: var(--maincolor);
+  padding: 15px;
+  color: #fff;
+  text-align: center;
+  margin-top: auto;
+  /* footer alanının her zaman altta kalmasını istiyorsak margintop auto özelliği ile her zaman altta kalamsını sağlamış oluruz */
+}
+
+/* hakkımızda alan değişikliği başlangıç */
+.dark{
+  background: var(--backgronud);
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 15px;
+  color: #fff;
+
+}
+
+
+aside#sidebar{
+  float: right;
+  width: 30%;
+  
+}
+
+article#main-col {
+  /* id ler özel olduklarında başlarındaki kapsayıcıyı yazmadan da ilerleyebiliriz */
+  float: left;
+  width: 60%;
+}
+
+
+@media(max-widht:768px){/* cihaz ekran genişliği max 768 px li geçene kadar bu komutları uygula, geçerse üstteki komutları kullan */
+aside#sidebar , article#main-col , nav , #branding{
+float: none;
+width: 100%;
+margin: auto;
+text-align: center;
+}
+nav ul{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+
+}
+#header-container{
+  flex-direction: column;
+}
+}

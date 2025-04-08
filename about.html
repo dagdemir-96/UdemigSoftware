@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemig Software</title>
+    <link rel="shortcut icon" href="/img/udemig.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><!-- başlık alanını header alanı içine aldık -->
+        <div class="container" id="header-container">
+            <!-- ilk kapsayıcı div başlık ve navigasyon alanı eşit aralıklarda olacağı için bu kapsayıcı içine aldık. sonra açılacak  div ve navigasyon alanları da kendi içlerinde birer kutu mantığı ile açılacak. -->
+            <div>
+                <h1 id="branding"><span class="highligt">Udemig</span>Software</h1>
+            </div>
+            <nav>
+                <!-- ul>(li>a)*3 kısa yolu ile ul içinde li onun da içinde 3 tane a etiketi açmış oluruz -->
+                <ul>
+                    <li><a href="index.html">Anasayfa</a></li>
+                    <li class="current"><a href="about.html">Hakkımızda</a></li>
+                    <li><a href="services.html">Hizmetler</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="newsletter">
+        <div class="container">
+            <h1>Abone Olarak İlk Fırsatlardan Siz Yararlanın</h1>
+            <form>
+                <input type="email" placeholder="Email adresinizi giriniz"
+                    required /><!-- required ile alanı zorunlu kılıyoruz -->
+                <button class="button_1"
+                    type="submit">Gönder</button><!-- sumbit default olarak tanımlı gelir ve göndermeyi sağlar -->
+            </form>
+        </div>
+    </section>
+
+
+<section id="main">
+    <div class="container">
+        <article id="main-col">
+            <h1>Vizyonumuz:</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos repellat est nemo asperiores veritatis illo unde quidem. Optio, tempora minus.</p>
+            <h1>Mizyonumuz:</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia blanditiis deserunt in ab, itaque culpa quae aspernatur quibusdam cumque veritatis?</p>
+            <h1>Bizi Tercih Etmelisiniz:</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti odit sit facere vel! Obcaecati architecto exercitationem excepturi quas commodi numquam!</p>
+        </article>
+        <aside id="sidebar">
+            <div class="dark">
+                <h3>Hakkımızda</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sequi dolores quos iure, amet a repellat numquam voluptatibus excepturi error. Cumque reprehenderit magnam explicabo deserunt! Rem, sed debitis veniam deserunt quam voluptate recusandae vitae minima eius nam consequatur ipsum commodi dolores voluptas nihil architecto aut dolorum impedit. Maxime, eum? Debitis! Corrupti sequi dolores quos iure, amet a repellat numquam voluptatibus excepturi error. Cumque reprehenderit magnam explicabo deserunt! Rem, sed debitis veniam deserunt quam voluptate recusandae vitae minima eius nam consequatur ipsum commodi dolores voluptas nihil architecto aut dolorum impedit. Maxime, eum? Debitis!</p>
+            </div>
+
+        </aside>
+    </div>
+
+</section>
+
+
+
+<footer>
+    <p>UdemigSoftware | Copyright * 2025</p>
+</footer>
+</body>
+</html>
